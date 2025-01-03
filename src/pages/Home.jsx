@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Home.css";
+import Categaries from "../components/Categareies";
+import Imgcards from "../components/imgcard";
+import Changeimg from "../components/changeimg";
 
 const Home = () => (
   <motion.div
@@ -9,6 +12,21 @@ const Home = () => (
     animate={{ opacity: 1 }}
     transition={{ duration: 0.8 }}
   >
+    <div style={{ display: "flex", alignItems: "center", gap: "20px", padding: "20px" }}>
+  <div style={{ flex: "1" }}>
+    <h1 style={{ fontSize: "36px", fontWeight:800, color: "#a80d0d", marginBottom: "10px" }}>Donate Blood, Save Lives</h1>
+    <p style={{ fontSize: "16px",  color: "#555", lineHeight: "1.6" }}>
+    Donating blood is a noble act that saves lives and brings hope to those in critical need. Every drop you give can make the difference between life and death for someone fighting illness or facing an emergency. Be a hero—donate blood today and inspire others to join this life-saving mission.
+    </p>
+  </div>
+  <div style={{ flex: "1" }}>
+    <img
+      src="https://as2.ftcdn.net/v2/jpg/02/77/81/95/1000_F_277819554_FwRXduqsSjlANdlwM4hesqGmAKlb1GE7.jpg"
+      alt="Loading..."
+      style={{ maxWidth: "95%", height: "auto", borderRadius: "10px", marginLeft:"50px" }}  />
+  </div>
+</div>
+
     {/* Hero Section */}
     <div className="hero-section">
       <h1 className="hero-title">Donate Blood, Save Lives</h1>
@@ -35,14 +53,7 @@ const Home = () => (
       </div>
     </div>
 
-    {/* Why Donate Section */}
-    <div className="info-section">
-      <h2 className="section-title">Why Donate Blood?</h2>
-      <p className="info-text">
-        Every blood donation can save up to three lives. Be a hero and make a
-        difference.
-      </p>
-    </div>
+    
 
     {/* Steps Section */}
     <div className="steps-section">
@@ -64,24 +75,18 @@ const Home = () => (
     </div>
 
     {/* Testimonials Section */}
-    <div className="testimonial-section">
-      <h2 className="section-title">What People Say</h2>
-      <div className="testimonials-container">
-        <div className="testimonial">
-          <p>
-            "This platform helped me find a donor in just 30 minutes. Truly a
-            lifesaver!"
-          </p>
-          <h4>- Aisha Khan</h4>
-        </div>
-        <div className="testimonial">
-          <p>
-            "Amazing experience! I was able to donate blood and help someone in
-            need easily."
-          </p>
-          <h4>- Ahmed Ali</h4>
-        </div>
-      </div>
+    <Imgcards/>
+  {/* Why Donate Section */}
+  <div className="info-section">
+      <h2 className="section-title">Why Donate Blood?</h2>
+      <p className="info-text">
+        Every blood donation can save up to three lives. Be a hero and make a
+        difference.
+      </p>
+    </div>
+    <Changeimg/>
+    <div>
+       <Categaries/>
     </div>
   </motion.div>
 );

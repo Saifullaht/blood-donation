@@ -12,6 +12,10 @@
     overflow-x: hidden;
     
   }
+  .main{
+  font-size: 50px;
+  margin-top: -50px;
+  }
   
   h1, h2, h3, h4 {
     color: #fff;
@@ -143,7 +147,7 @@
   .info-section {
     text-align: center;
     padding: 40px 20px;
-    background-color: #ff2770;
+    background-color: rgb(169, 15, 15);
     color: #fff;
     margin: 40px 0;
     border-radius: 10px;
